@@ -1,70 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTP Verification</title>
-    <style>
-        #verification_heading {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        #verification_subtext {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .code-container {
-            display: flex;
-            gap: 10px;
-        }
-
-        .code {
-            width: 40px;
-            height: 40px;
-            font-size: 20px;
-            text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-    </style>
+	<link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-    <div>
+<body>
+	 <div>
         <h2 id="verification_heading">Verify Your Account</h2>
-        <p id="verification_subtext">Enter the 6-digit OTP sent to your mobile number.</p>
-		
+        <p id="verification_subtext">we emailed you the six digit code to email.com enter the code below to confirm your email address.</p>
 
         <div class="code-container">
-            <input type="text" id="code" maxlength="1" oninput="focusNext(this)" />
-            <input type="text" id="code" maxlength="1" oninput="focusNext(this)" />
-            <input type="text" id="code" maxlength="1" oninput="focusNext(this)" />
-            <input type="text" id="code" maxlength="1" oninput="focusNext(this)" />
-            <input type="text" id="code" maxlength="1" oninput="focusNext(this)" />
-            <input type="text" id="code" maxlength="1" oninput="focusNext(this)" />
+            <input type="text" class="code" maxlength="1" oninput="focusNext(this)" />
+            <input type="text" class="code" maxlength="1" oninput="focusNext(this)" />
+            <input type="text" class="code" maxlength="1" oninput="focusNext(this)" />
+            <input type="text" class="code" maxlength="1" oninput="focusNext(this)" />
+            <input type="text" class="code" maxlength="1" oninput="focusNext(this)" />
+            <input type="text" class="code" maxlength="1" oninput="focusNext(this)" />
         </div>
     </div>
+	<!-- the entire body must be written by student -->
+    <script type="text/javascript" src="./script.js">
+</script>
 
-    <script>
-        function focusNext(currentInput) {
-            if (currentInput.value.length === 1) {
-                // Move to the next input field
-                const nextInput = currentInput.nextElementSibling;
-                if (nextInput) {
-                    nextInput.focus();
-                }
-            } else if (currentInput.value.length === 0) {
-                // Move to the previous input field on backspace
-                const prevInput = currentInput.previousElementSibling;
-                if (prevInput) {
-                    prevInput.focus();
-                }
-            }
-        }
-    </script>
 </body>
+
 </html>
