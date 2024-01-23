@@ -8,21 +8,20 @@
 
 <body>
 	 <div>
-        <h2 id="verification_heading">Verify Your Account</h2>
-        <p id="verification_subtext">we emailed you the six digit code to email.com enter the code below to confirm your email address.</p>
-		<p>Focused</p>
+    <div id="verification_heading">OTP Verification</div>
+    <div id="verification_subtext">Enter the 6-digit code sent to your mobile number.</div>
+    <div class="code-container">
+      <input class="code" type="text" maxlength="1" id="digit1">
+      <input class="code" type="text" maxlength="1" id="digit2">
+      <input class="code" type="text" maxlength="1" id="digit3">
+      <input class="code" type="text" maxlength="1" id="digit4">
+      <input class="code" type="text" maxlength="1" id="digit5">
+      <input class="code" type="text" maxlength="1" id="digit6">
+    </div>
+  </div>
 
-        
-        <div class="code-container">
-            <input id="code-5" type="text" class="code" maxlength="1" oninput="focusNext(this, 1)" />
-            <input id="code-5" type="text" class="code" maxlength="1" oninput="focusNext(this, 2)" />
-            <input id="code-5" type="text" class="code" maxlength="1" oninput="focusNext(this, 3)" />
-            <input id="code-5" type="text" class="code" maxlength="1" oninput="focusNext(this, 4)" />
-            <input id="code-5" type="text" class="code" maxlength="1" oninput="focusNext(this, 5)" />
-            <input id="code-5" type="text" class="code" maxlength="1" />
-        </div>
-    </div>
-    </div>
+		 
+
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
