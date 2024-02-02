@@ -1,18 +1,18 @@
- document.addEventListener('DOMContentLoaded', function () {
-      const codeInputs = document.querySelectorAll('.code');
+function focusNext(currentInput) {
+    const maxLength = parseInt(currentInput.getAttribute('maxlength'));
+    const nextInputId = 'digit' + (parseInt(currentInput.id.substring(5)) + 1);
 
-      codeInputs.forEach((input, index) => {
-        input.addEventListener('input', function () {
-          if (input.value.length === 1 && index < codeInputs.length - 1) {
-            codeInputs[index + 1].focus();
-          }
-        });
+    if (currentInput.value.length === maxLength) {
+        document.getElementById(nextInputId).focus();
+    }
+}
 
-        input.addEventListener('keydown', function (event) {
-          if (event.key === 'Backspace' && index > 0) {
-            codeInputs[index].value = ''; // Clear the current input
-            codeInputs[index - 1].focus();
-          }
-        });
-      });
-    });
+function focusPrev(currentInput) {
+    if (currentInput.value.length === 0 && event.key === 'Backspace') {
+        const prevInputId = 'digit' + (parseInt(currentInput.id.substring(5)) - 1);
+
+        if (prevInputId !== 'digit0') {
+            document.getElementById(prevInputId).focus();
+        }
+    }
+}

@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>OTP Verification</title>
 </head>
-
 <body>
-  <div>
-    <div id="verification_heading">Verify Your Account</div>
-    <div id="verification_subtext">Enter the 6-digit code sent to your mobile number.</div>
-    <div class="code-container">
-      <input class="code" type="text" maxlength="1" id="code-1">
-      <input class="code" type="text" maxlength="1" id="code-2">
-      <input class="code" type="text" maxlength="1" id="code-3">
-      <input class="code" type="text" maxlength="1" id="code-4">
-      <input class="code" type="text" maxlength="1" id="code-5">
-      <input class="code" type="text" maxlength="1" id="code-6">
+    <div class="verification-container">
+        <h1 id="verification_heading">OTP Verification</h1>
+        <h3 id="verification_subtext">Enter the 6-digit OTP sent to your mobile number</h3>
+        
+        <div class="code-container">
+            <input type="text" class="code" maxlength="1" id="digit1" oninput="focusNext(this)" onkeydown="focusPrev(this)">
+            <input type="text" class="code" maxlength="1" id="digit2" oninput="focusNext(this)" onkeydown="focusPrev(this)">
+            <input type="text" class="code" maxlength="1" id="digit3" oninput="focusNext(this)" onkeydown="focusPrev(this)">
+            <input type="text" class="code" maxlength="1" id="digit4" oninput="focusNext(this)" onkeydown="focusPrev(this)">
+            <input type="text" class="code" maxlength="1" id="digit5" oninput="focusNext(this)" onkeydown="focusPrev(this)">
+            <input type="text" class="code" maxlength="1" id="digit6" onkeydown="focusPrev(this)">
+        </div>
     </div>
-    <div id="focused" style="display: inline-block; width: 0; height: 0;"></div>
-  </div>
-
-  <script type="text/javascript" src="./script.js"></script>
+    
+    <script src="script.js"></script>
 </body>
-
 </html>
